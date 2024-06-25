@@ -1,0 +1,128 @@
+.postCreator {
+  background-color: #fff;
+  border: 1px solid #e0e0e0;
+  border-radius: 8px;
+  padding: 16px;
+  margin-bottom: 20px;
+}
+
+.inputArea {
+  min-height: 40px;
+  border: 1px solid #e0e0e0;
+  border-radius: 20px;
+  padding: 8px 16px;
+  cursor: text;
+  display: flex;
+  align-items: center;
+}
+
+.expanded {
+  min-height: 100px;
+}
+
+.placeholder {
+  color: #757575;
+}
+
+.textarea {
+  width: 100%;
+  min-height: 80px;
+  border: none;
+  resize: none;
+  outline: none;
+  font-family: inherit;
+  font-size: inherit;
+}
+
+.actionArea {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 16px;
+}
+
+.uploadButton {
+  background: none;
+  border: none;
+  color: #1877f2;
+  font-weight: bold;
+  cursor: pointer;
+  padding: 8px 16px;
+  border-radius: 20px;
+}
+
+.uploadButton:hover {
+  background-color: #e7f3ff;
+}
+
+.expandedButtons {
+  display: flex;
+  gap: 8px;
+}
+
+.cancelButton,
+.submitButton {
+  padding: 8px 16px;
+  border: none;
+  border-radius: 20px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.cancelButton {
+  background-color: #e0e0e0;
+  color: #333;
+}
+
+.submitButton {
+  background-color: #1877f2;
+  color: #fff;
+}
+
+.cancelButton:hover {
+  background-color: #d0d0d0;
+}
+
+.submitButton:hover {
+  background-color: #166fe5;
+}
+.imagePreviewArea {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-top: 10px;
+}
+
+.imagePreview {
+  position: relative;
+  width: 100px;
+  height: 100px;
+}
+
+.imagePreview img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 4px;
+}
+
+.removeImageBtn {
+  position: absolute;
+  top: -5px;
+  right: -5px;
+  background-color: rgba(0, 0, 0, 0.5);
+  color: white;
+  border: none;
+  border-radius: 50%;
+  width: 20px;
+  height: 20px;
+  font-size: 14px;
+  line-height: 1;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.removeImageBtn:hover {
+  background-color: rgba(0, 0, 0, 0.7);
+}

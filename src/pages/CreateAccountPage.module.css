@@ -1,0 +1,181 @@
+.hidden {
+  display: none;
+}
+
+.pageContainer {
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.headerIcon {
+  height: 48px;
+  width: auto;
+  margin-right: 10px;
+}
+
+.headerText {
+  font-size: 24px;
+}
+
+.headerTitle {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+}
+
+.headerContainer {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+
+.mainContent {
+  margin: 40px auto 42px;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+
+.signupContent {
+  width: 500px;
+  padding: 40px 69px;
+  border: 1px solid rgba(0, 0, 0, 0.12);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  transition: height 0.3s ease;
+}
+
+.contentSection {
+  width: 100%;
+  margin-bottom: 20px;
+}
+
+.sectionTitle {
+  font-size: 20px;
+  margin-bottom: 10px;
+}
+
+.checkboxLabel {
+  display: flex;
+  align-items: center;
+  margin-bottom: 10px;
+}
+
+.checkbox {
+  margin-right: 10px;
+}
+
+.termsContent {
+  width: 100%;
+  border: 1px solid rgba(0, 0, 0, 0.12);
+  padding: 10px;
+  margin-bottom: 10px;
+  max-height: 200px;
+  overflow-y: auto;
+}
+
+.termsText {
+  font-size: 14px;
+}
+
+.inputGroup {
+  display: flex;
+  align-items: center;
+  width: 100%;
+}
+
+.inputEmail,
+.inputPassword,
+.inputPasswordConfirm,
+.inputNickname,
+.inputVerificationCode {
+  width: 100%;
+  height: 45px;
+  margin: 8px 0;
+  border: none;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.12);
+  font-size: 18px;
+  padding-left: 10px;
+}
+
+.inputEmailDisabled {
+  width: 100%;
+  font-size: 18px;
+  margin-bottom: 8px;
+  padding-left: 10px;
+  color: #999;
+}
+
+.btn {
+  height: 50px;
+  width: 100%;
+  padding: 10px 20px;
+  background-color: #eef5ff;
+  color: #333;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 16px;
+  font-weight: 700;
+  text-align: center;
+}
+
+.btn:hover {
+  background-color: #b4d4ff;
+}
+
+.btnCheckEmail,
+.btnCheckNickname,
+.btnCheckCode {
+  width: auto;
+  padding: 10px 20px;
+  margin-left: 10px;
+  flex-shrink: 0;
+}
+
+.buttonWrapper {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  margin-top: 20px;
+}
+
+.profilePicWrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 10px;
+}
+
+.profilePic {
+  width: 100px;
+  height: 100px;
+  margin-bottom: 10px;
+  border-radius: 100%;
+  object-fit: cover;
+}
+
+.inputFile {
+  display: none;
+}
+
+.footer {
+  font-size: 12px;
+  width: 100%;
+  text-align: center;
+}
+
+.contactLink {
+  color: #b4d4ff;
+  text-decoration: none;
+}
+
+.contactLink:hover {
+  text-decoration: underline;
+}

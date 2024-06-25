@@ -1,0 +1,119 @@
+.hidden {
+  display: none;
+}
+
+.pageContainer {
+  width: 100%;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.headerIcon {
+  height: 48px;
+  width: auto;
+  margin-right: 10px;
+}
+
+.headerText {
+  font-size: 24px;
+}
+
+.headerTitle {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+}
+
+.headerContainer {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+
+.mainContent {
+  margin: 40px auto 42px;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+
+.formContainer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.loginForm {
+  border: 1px solid rgba(0, 0, 0, 0.12);
+  padding: 40px 69px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: relative;
+}
+
+.inputEmail,
+.inputPassword {
+  width: 440px;
+  height: 45px;
+  margin: 8px 0;
+  border: none;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.12);
+  font-size: 18px;
+}
+
+.emailHelperText,
+.passwordHelperText {
+  font-size: 14px;
+  color: red;
+  margin: 8px 0;
+}
+
+.saveOptions {
+  margin: 8px 0;
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+}
+
+.links {
+  margin: 8px 0;
+  display: flex;
+  gap: 10px;
+}
+
+.loginButton {
+  font-weight: 700;
+  height: 50px;
+  width: 100%;
+  margin-top: 8px;
+  padding: 10px 20px;
+  background-color: #eef5ff;
+  color: #333;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 16px;
+}
+
+.loginButton:hover {
+  background-color: #d4e0ff;
+}
+
+.footer {
+  width: 100%;
+  text-align: center;
+}
+
+.contactLink {
+  color: #007bff;
+  text-decoration: none;
+}
+
+.contactLink:hover {
+  text-decoration: underline;
+}

@@ -1,0 +1,184 @@
+.mainContainer {
+  max-width: 600px;
+  margin: 0 auto;
+  padding: 20px;
+  font-family: "Arial", sans-serif;
+}
+
+.pageTitle {
+  font-size: 24px;
+  color: #262626;
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+.postList {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.postCard {
+  background-color: #fff;
+  border: 1px solid #dbdbdb;
+  border-radius: 3px;
+  margin-bottom: 16px;
+}
+
+.postHeader {
+  display: flex;
+  align-items: center;
+  padding: 14px 16px;
+}
+
+.authorProfileImg {
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  margin-right: 12px;
+}
+
+.authorInfo {
+  flex-grow: 1;
+}
+
+.authorName {
+  font-weight: 600;
+  font-size: 14px;
+  color: #262626;
+  margin: 0;
+}
+
+.postTime {
+  font-size: 12px;
+  color: #8e8e8e;
+  margin: 0;
+}
+
+.moreButton {
+  background: none;
+  border: none;
+  cursor: pointer;
+  font-size: 16px;
+  color: #262626;
+}
+
+.postContent {
+  padding: 0 16px 16px;
+  font-size: 14px;
+  color: #262626;
+}
+
+.photoSlider {
+  position: relative;
+  width: 100%;
+  overflow: hidden;
+}
+
+.photoSliderInner {
+  display: flex;
+  transition: transform 0.3s ease-in-out;
+}
+
+.postPhoto {
+  width: 100%;
+  flex-shrink: 0;
+}
+
+.sliderButton {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background-color: rgba(0, 0, 0, 0.3);
+  color: white;
+  border: none;
+  padding: 8px 12px;
+  cursor: pointer;
+  font-size: 18px;
+  z-index: 10;
+}
+
+.sliderButton:hover {
+  background-color: rgba(0, 0, 0, 0.5);
+}
+
+.prevButton {
+  left: 10px;
+}
+
+.nextButton {
+  right: 10px;
+}
+
+.photoIndicator {
+  position: absolute;
+  bottom: 10px;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  gap: 4px;
+}
+
+.indicatorDot {
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background-color: rgba(255, 255, 255, 0.5);
+}
+
+.indicatorDot.active {
+  background-color: white;
+}
+
+.postMeta {
+  padding: 12px 16px;
+  font-size: 14px;
+  color: #8e8e8e;
+  border-top: 1px solid #efefef;
+}
+
+.loadingText,
+.errorText {
+  text-align: center;
+  font-size: 16px;
+  color: #8e8e8e;
+  margin: 20px 0;
+}
+
+.errorText {
+  color: #ed4956;
+}
+
+.paginationContainer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 20px;
+}
+
+.paginationButton {
+  padding: 8px 12px;
+  background-color: #0095f6;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 14px;
+  margin: 0 10px;
+}
+
+.paginationButton:disabled {
+  background-color: #b2dffc;
+  cursor: not-allowed;
+}
+
+.paginationInfo {
+  font-size: 14px;
+  color: #8e8e8e;
+}
+.postPhoto {
+  width: 100%;
+  height: 300px; /* 원하는 높이로 조정 가능 */
+  object-fit: cover;
+  cursor: pointer;
+}
