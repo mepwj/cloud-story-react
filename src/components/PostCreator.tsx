@@ -1,13 +1,15 @@
-import React, { useState, useRef, useEffect } from "react";
-import { useNavigate } from "react-router-dom"; // usenavigate를 import합니다.
+import React, { useState, useRef, useEffect, useContext } from "react";
+import { useNavigate } from "react-router-dom";
 import { useSelector } from "react-redux";
 import { RootState } from "../store";
-import axios from "../api/axios"; // axios 인스턴스를 import합니다.
+import axios from "../api/axios";
 import styles from "./PostCreator.module.css";
+import { PostsRefreshContext } from "../pages/MainPage"; // MainPage에서 제공하는 컨텍스트를 import
 
 const PostCreator: React.FC = () => {
   const { nickname, token } = useSelector((state: RootState) => state.auth);
-  const navigate = useNavigate(); // usenavigate 훅을 사용하여 navigate 객체를 얻습니다.
+  const navigate = useNavigate();
+  const refreshPosts = useContext(PostsRefreshContext); // 컨텍스트를 사용하여 새로 고침 함수를 가져옵니다.
 
   const [isExpanded, setIsExpanded] = useState(false);
   const [content, setContent] = useState("");
@@ -38,21 +40,16 @@ const PostCreator: React.FC = () => {
     }
 
     const formData = new FormData();
-    formData.append("title", ""); // form-data에 title 항목 추가
-    formData.append("content", content); // form-data에 content 항목 추가
+    formData.append("title", "");
+    formData.append("content", content);
 
     if (images.length === 0) {
-      formData.append("photos", new Blob()); // 빈 파일을 추가하여 photos 항목 생성
+      formData.append("photos", new Blob());
     } else {
-      images.forEach((image, index) => {
-        formData.append("photos", image); // form-data에 photos 항목 추가
+      images.forEach((image) => {
+        formData.append("photos", image);
       });
     }
-
-    // FormData 객체의 모든 키-값 쌍을 출력합니다.
-    formData.forEach((value, key) => {
-      console.log(`${key}:`, value);
-    });
 
     try {
       const response = await axios.post("/posts", formData, {
@@ -63,7 +60,8 @@ const PostCreator: React.FC = () => {
       });
 
       if (response.data.success) {
-        navigate("/"); // 성공 시 메인 페이지로 이동
+        refreshPosts(); // 새로 고침 함수를 호출합니다.
+        navigate("/");
       } else {
         alert("게시글을 생성하는데 실패했습니다.");
       }

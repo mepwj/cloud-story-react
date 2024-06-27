@@ -1,0 +1,160 @@
+.container {
+    max-width: 600px;
+    margin: 0 auto;
+    padding: 40px 20px;
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    margin-top: 150px;
+}
+
+.profileHeader {
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.profileImageContainer {
+    position: relative;
+    width: 150px;
+    height: 150px;
+    margin: 0 auto 20px;
+}
+
+.profileImage {
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 3px solid #fff;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+}
+
+.changePhotoButton {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+    font-size: 18px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: background-color 0.3s;
+}
+
+.changePhotoButton:hover {
+    background-color: #0056b3;
+}
+
+.profileName {
+    font-size: 24px;
+    font-weight: bold;
+    margin: 0;
+    color: #333;
+}
+
+.profileInfo {
+    margin-bottom: 30px;
+}
+
+.infoItem {
+    display: flex;
+    align-items: center;
+    margin-bottom: 15px;
+}
+
+.infoLabel {
+    flex: 0 0 120px;
+    font-weight: bold;
+    color: #555;
+}
+
+.infoValue {
+    flex: 1;
+    color: #333;
+}
+
+.input {
+    flex: 1;
+    padding: 8px 12px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    font-size: 14px;
+}
+
+.actionButtons {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+}
+
+.editButton,
+.saveButton,
+.cancelButton {
+    padding: 10px 20px;
+    border: none;
+    border-radius: 4px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.editButton {
+    background-color: #007bff;
+    color: white;
+}
+
+.editButton:hover {
+    background-color: #0056b3;
+}
+
+.saveButton {
+    background-color: #28a745;
+    color: white;
+}
+
+.saveButton:hover {
+    background-color: #218838;
+}
+
+.cancelButton {
+    background-color: #dc3545;
+    color: white;
+}
+
+.cancelButton:hover {
+    background-color: #c82333;
+}
+
+@media (max-width: 480px) {
+    .container {
+        padding: 20px 10px;
+    }
+
+    .profileImageContainer {
+        width: 120px;
+        height: 120px;
+    }
+
+    .profileName {
+        font-size: 20px;
+    }
+
+    .infoItem {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .infoLabel {
+        margin-bottom: 5px;
+    }
+
+    .input {
+        width: 100%;
+    }
+}

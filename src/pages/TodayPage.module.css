@@ -1,0 +1,85 @@
+.mainContainer {
+    max-width: 600px;
+    margin: 0 auto;
+    padding: 20px;
+    font-family: 'Arial', sans-serif;
+}
+
+.loadingText,
+.errorText {
+    text-align: center;
+    font-size: 18px;
+    margin: 20px 0;
+}
+
+.errorText {
+    color: #ff4444;
+}
+
+.refreshButtonContainer {
+    display: flex;
+    justify-content: flex-end;
+    margin-bottom: 20px;
+}
+
+.refreshButton {
+    background-color: #eef5ff;
+    border: none;
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.refreshButton:hover {
+    background-color: #d4e0ff;
+}
+
+.refreshButton i {
+    font-size: 20px;
+    color: #333;
+}
+
+.postList {
+    margin-top: 20px;
+}
+
+.paginationContainer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 30px;
+}
+
+.paginationButton {
+    background-color: #008CBA;
+    border: none;
+    color: white;
+    padding: 10px 20px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 0 10px;
+    cursor: pointer;
+    border-radius: 4px;
+    transition: background-color 0.3s;
+}
+
+.paginationButton:hover {
+    background-color: #007B9A;
+}
+
+.paginationButton:disabled {
+    background-color: #cccccc;
+    cursor: not-allowed;
+}
+
+.paginationInfo {
+    font-size: 16px;
+    margin: 0 20px;
+}

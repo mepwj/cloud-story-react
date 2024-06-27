@@ -1,41 +1,28 @@
-.mainContainer {
-  max-width: 600px;
-  margin: 0 auto;
-  padding: 20px;
-  font-family: "Arial", sans-serif;
-}
-
-.pageTitle {
-  font-size: 24px;
-  color: #262626;
-  margin-bottom: 20px;
-  text-align: center;
-}
-
-.postList {
-  display: flex;
-  flex-direction: column;
-  gap: 20px;
-}
-
 .postCard {
   background-color: #fff;
-  border: 1px solid #dbdbdb;
-  border-radius: 3px;
-  margin-bottom: 16px;
+  border-radius: 16px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+  margin-bottom: 32px;
+  overflow: hidden;
+  transition: all 0.3s ease;
+}
+
+.postCard:hover {
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.12);
 }
 
 .postHeader {
   display: flex;
   align-items: center;
-  padding: 14px 16px;
+  padding: 20px;
 }
 
 .authorProfileImg {
-  width: 32px;
-  height: 32px;
+  width: 48px;
+  height: 48px;
   border-radius: 50%;
-  margin-right: 12px;
+  margin-right: 16px;
+  object-fit: cover;
 }
 
 .authorInfo {
@@ -44,35 +31,46 @@
 
 .authorName {
   font-weight: 600;
-  font-size: 14px;
-  color: #262626;
+  font-size: 16px;
+  color: #1a1a1a;
   margin: 0;
 }
 
 .postTime {
-  font-size: 12px;
-  color: #8e8e8e;
-  margin: 0;
+  font-size: 14px;
+  color: #737373;
+  margin: 4px 0 0;
 }
 
 .moreButton {
   background: none;
   border: none;
   cursor: pointer;
-  font-size: 16px;
-  color: #262626;
+  font-size: 24px;
+  color: #737373;
+  padding: 8px;
+  border-radius: 50%;
+  transition: all 0.2s ease;
+}
+
+.moreButton:hover {
+  background-color: #f5f5f5;
+  color: #1a1a1a;
 }
 
 .postContent {
-  padding: 0 16px 16px;
-  font-size: 14px;
-  color: #262626;
+  padding: 0 20px 20px;
+  font-size: 16px;
+  color: #1a1a1a;
+  line-height: 1.6;
 }
 
 .photoSlider {
   position: relative;
   width: 100%;
   overflow: hidden;
+  border-radius: 12px;
+  margin-bottom: 20px;
 }
 
 .photoSliderInner {
@@ -82,41 +80,53 @@
 
 .postPhoto {
   width: 100%;
-  flex-shrink: 0;
+  height: 400px;
+  object-fit: cover;
 }
 
 .sliderButton {
   position: absolute;
   top: 50%;
   transform: translateY(-50%);
-  background-color: rgba(0, 0, 0, 0.3);
-  color: white;
+  background-color: rgba(255, 255, 255, 0.9);
+  color: #1a1a1a;
   border: none;
-  padding: 8px 12px;
+  border-radius: 50%;
+  width: 40px;
+  height: 40px;
   cursor: pointer;
-  font-size: 18px;
-  z-index: 10;
+  font-size: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.2s ease;
+  opacity: 0;
+}
+
+.photoSlider:hover .sliderButton {
+  opacity: 1;
 }
 
 .sliderButton:hover {
-  background-color: rgba(0, 0, 0, 0.5);
+  background-color: #fff;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
 }
 
 .prevButton {
-  left: 10px;
+  left: 16px;
 }
 
 .nextButton {
-  right: 10px;
+  right: 16px;
 }
 
 .photoIndicator {
   position: absolute;
-  bottom: 10px;
+  bottom: 16px;
   left: 50%;
   transform: translateX(-50%);
   display: flex;
-  gap: 4px;
+  gap: 8px;
 }
 
 .indicatorDot {
@@ -124,61 +134,43 @@
   height: 6px;
   border-radius: 50%;
   background-color: rgba(255, 255, 255, 0.5);
+  transition: all 0.2s ease;
 }
 
 .indicatorDot.active {
-  background-color: white;
+  background-color: #fff;
+  transform: scale(1.2);
 }
 
 .postMeta {
-  padding: 12px 16px;
-  font-size: 14px;
-  color: #8e8e8e;
-  border-top: 1px solid #efefef;
-}
-
-.loadingText,
-.errorText {
-  text-align: center;
-  font-size: 16px;
-  color: #8e8e8e;
-  margin: 20px 0;
-}
-
-.errorText {
-  color: #ed4956;
-}
-
-.paginationContainer {
   display: flex;
-  justify-content: center;
+  justify-content: space-between;
+  padding: 16px 20px;
+  font-size: 14px;
+  color: #737373;
+  border-top: 1px solid #f0f0f0;
+}
+
+.metaItem {
+  display: flex;
   align-items: center;
-  margin-top: 20px;
+  gap: 8px;
+  transition: all 0.2s ease;
 }
 
-.paginationButton {
-  padding: 8px 12px;
-  background-color: #0095f6;
-  color: white;
-  border: none;
-  border-radius: 4px;
-  cursor: pointer;
-  font-size: 14px;
-  margin: 0 10px;
+.metaIcon {
+  width: 20px;
+  height: 20px;
 }
 
-.paginationButton:disabled {
-  background-color: #b2dffc;
-  cursor: not-allowed;
+.metaCount {
+  font-weight: 500;
 }
 
-.paginationInfo {
-  font-size: 14px;
-  color: #8e8e8e;
+.metaItem:hover {
+  color: #1a1a1a;
 }
-.postPhoto {
-  width: 100%;
-  height: 300px; /* 원하는 높이로 조정 가능 */
-  object-fit: cover;
-  cursor: pointer;
+
+.metaItem:hover .metaIcon {
+  fill: #1a1a1a;
 }

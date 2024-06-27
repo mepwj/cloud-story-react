@@ -24,3 +24,15 @@ export interface Post {
   commentCount: number;
   photos: Photo[];
 }
+
+export interface Comment {
+  id: number;
+  content: string;
+  createdAt: string;
+  updatedAt: string;
+  user: {
+    id: number;
+    nickname: string;
+    profilePictureUrl: string;
+  };
+}

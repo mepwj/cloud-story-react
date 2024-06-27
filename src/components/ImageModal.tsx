@@ -1,5 +1,5 @@
 import React from "react";
-import styles from "./ImageModal.module.css"; // 필요한 스타일을 새 CSS 모듈 파일로 분리
+import styles from "./ImageModal.module.css"; 
 
 interface ImageModalProps {
   imageUrl: string;

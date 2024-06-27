@@ -7,6 +7,7 @@ import LoginPage from "./pages/LoginPage";
 import CreateAccountPage from "./pages/CreateAccountPage";
 import TodayPage from "./pages/TodayPage";
 import WeekPage from "./pages/WeekPage";
+import ProfilePage from "./pages/ProfilePage";
 import PrivateRoute from "./components/PrivateRoute";
 
 const App: React.FC = () => {
@@ -23,6 +24,7 @@ const App: React.FC = () => {
           <Route path="/" element={<MainPage />} />
           <Route path="/today" element={<TodayPage />} />
           <Route path="/week" element={<WeekPage />} />
+          <Route path="/profile-edit" element={<ProfilePage />} />
         </Route>
       </Routes>
     </div>

@@ -39,12 +39,14 @@ const Navbar: React.FC = () => {
           alt="Cloud Story Logo"
           onClick={() => navigate("/")}
         />
-        <h2 className={styles.title} onClick={() => navigate("/")}>
-          뜬구름
-        </h2>
-        <h4 className={styles.subTitle} onClick={() => navigate("/")}>
-          잡는 이야기의 시작..
-        </h4>
+        <div className={styles.titleContainer}>
+          <h2 className={styles.title} onClick={() => navigate("/")}>
+            뜬구름
+          </h2>
+          <h4 className={styles.subTitle} onClick={() => navigate("/")}>
+            잡는 이야기의 시작..
+          </h4>
+        </div>
       </div>
       <div className={styles.navCenter}>
         <a
@@ -80,11 +82,12 @@ const Navbar: React.FC = () => {
           </div>
           {showMenu && (
             <div className={styles.profileMenu}>
-              <button onClick={() => navigate("/profile-edit")}>내 정보</button>
-              <button onClick={() => navigate("/password-change")}>
-                비밀번호변경
+              <button onClick={() => navigate("/profile-edit")}>
+                <i className="fas fa-user"></i> 내 정보
               </button>
-              <button onClick={handleLogout}>로그아웃</button>
+              <button onClick={handleLogout}>
+                <i className="fas fa-sign-out-alt"></i> 로그아웃
+              </button>
             </div>
           )}
         </div>
