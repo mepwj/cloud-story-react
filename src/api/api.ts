@@ -1,6 +1,6 @@
 import axios from 'axios';
 
-const API_URL = process.env.REACT_APP_API_URL;
+const API_URL = "/api";
 
 export const fetchComments = async (postId: number, page: number, limit: number, token: string) => {
   const response = await axios.get(`${API_URL}/posts/${postId}/comments?page=${page}&limit=${limit}`, {

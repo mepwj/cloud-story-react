@@ -15,7 +15,7 @@ const usePostDetail = (postId: number) => {
   useEffect(() => {
     const fetchPostDetail = async () => {
       try {
-        const response = await axios.get(`${process.env.REACT_APP_API_URL}/posts/${postId}`, {
+        const response = await axios.get(`/api/posts/${postId}`, {
           headers: {
             Authorization: `Bearer ${token}`,
           },

@@ -45,12 +45,10 @@ const PhotoSlider: React.FC<PhotoSliderProps> = ({ photos }) => {
         {photos.map((photo) => (
           <img
             key={photo.id}
-            src={`${process.env.REACT_APP_API_URL}/files${photo.url}`}
+            src={`/api/files${photo.url}`}
             alt={`Post photo ${photo.photoOrder}`}
             className={styles.postPhoto}
-            onClick={() =>
-              openModal(`${process.env.REACT_APP_API_URL}/files${photo.url}`)
-            }
+            onClick={() => openModal(`/api/files${photo.url}`)}
           />
         ))}
       </div>

@@ -74,9 +74,7 @@ const EditPostModal: React.FC<EditPostModalProps> = ({
     // 기존 이미지를 Blob으로 변환하여 추가
     const existingImageBlobs = await Promise.all(
       existingImages.map(async (image) => {
-        const response = await fetch(
-          `${process.env.REACT_APP_API_URL}/files${image.url}`
-        );
+        const response = await fetch(`api/files${image.url}`);
         const blob = await response.blob();
         return new File([blob], `existing-${image.id}.jpg`, {
           type: "image/jpeg",
@@ -143,10 +141,7 @@ const EditPostModal: React.FC<EditPostModalProps> = ({
         <div className={styles.imagePreviewArea}>
           {existingImages.map((image, index) => (
             <div key={`existing-${image.id}`} className={styles.imagePreview}>
-              <img
-                src={`${process.env.REACT_APP_API_URL}/files${image.url}`}
-                alt={`Existing ${index}`}
-              />
+              <img src={`/api/files${image.url}`} alt={`Existing ${index}`} />
               <button
                 onClick={() => removeImage(index, true)}
                 className={styles.removeImageBtn}

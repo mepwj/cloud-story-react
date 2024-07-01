@@ -56,7 +56,7 @@ const Step4: React.FC<Step4Props> = ({ email, password }) => {
     }
 
     try {
-      const response = await api.get(`users/check-nickname`, {
+      const response = await api.get(`/users/check-nickname`, {
         params: { nickname },
       });
       if (response.data.success && response.data.available) {
@@ -99,7 +99,7 @@ const Step4: React.FC<Step4Props> = ({ email, password }) => {
     }
 
     try {
-      const response = await api.post("users/register", formData, {
+      const response = await api.post("/users/register", formData, {
         headers: {
           "Content-Type": "multipart/form-data",
         },
