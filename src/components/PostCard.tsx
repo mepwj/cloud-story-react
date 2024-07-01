@@ -83,7 +83,7 @@ const PostCard: React.FC<PostCardProps> = ({
       <div className={styles.postCard}>
         <div className={styles.postHeader}>
           <img
-            src={`/api/files${post.user.profilePictureUrl}`}
+            src={`3.38.152.113/api/files${post.user.profilePictureUrl}`}
             alt={`${post.user.nickname}'s profile`}
             className={styles.authorProfileImg}
           />

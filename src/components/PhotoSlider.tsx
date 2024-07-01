@@ -45,7 +45,7 @@ const PhotoSlider: React.FC<PhotoSliderProps> = ({ photos }) => {
         {photos.map((photo) => (
           <img
             key={photo.id}
-            src={`/api/files${photo.url}`}
+            src={`3.38.152.113/api/files${photo.url}`}
             alt={`Post photo ${photo.photoOrder}`}
             className={styles.postPhoto}
             onClick={() => openModal(`/api/files${photo.url}`)}

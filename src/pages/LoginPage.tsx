@@ -86,12 +86,15 @@ const LoginPage: React.FC = () => {
     const loginData = { email, password };
 
     try {
-      const response = await fetch("/api/users/login", {
-        method: "POST",
-        headers: { "Content-Type": "application/json" },
-        body: JSON.stringify(loginData),
-        mode: "cors",
-      });
+      const response = await fetch(
+        `${process.env.REACT_APP_API_URL}/users/login`,
+        {
+          method: "POST",
+          headers: { "Content-Type": "application/json" },
+          body: JSON.stringify(loginData),
+          mode: "cors",
+        }
+      );
 
       if (response.ok) {
         const data = await response.json();

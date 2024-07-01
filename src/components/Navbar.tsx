@@ -16,7 +16,7 @@ const Navbar: React.FC = () => {
   const location = useLocation();
   const [showMenu, setShowMenu] = useState(false);
 
-  const apiUrl = "/api";
+  const apiUrl = "3.38.152.113/api";
   const profileImage = profileImageUrl
     ? `${apiUrl}/files${profileImageUrl}`
     : default_profile_img;
