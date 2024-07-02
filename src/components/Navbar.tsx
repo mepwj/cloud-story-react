@@ -6,7 +6,7 @@ import { logout } from "../features/auth/authSlice";
 import styles from "./Navbar.module.css";
 import cloud_story_logo from "../assets/cloud-story-logo.png";
 import default_profile_img from "../assets/default-profile.png";
-
+import API_URL from "../api/api";
 const Navbar: React.FC = () => {
   const { profileImageUrl, nickname } = useSelector(
     (state: RootState) => state.auth
@@ -16,9 +16,8 @@ const Navbar: React.FC = () => {
   const location = useLocation();
   const [showMenu, setShowMenu] = useState(false);
 
-  const apiUrl = "3.38.152.113/api";
   const profileImage = profileImageUrl
-    ? `${apiUrl}/files${profileImageUrl}`
+    ? `${API_URL}/files${profileImageUrl}`
     : default_profile_img;
 
   const handleProfileClick = () => {

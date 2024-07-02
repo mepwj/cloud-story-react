@@ -5,7 +5,7 @@ import { RootState } from "../store";
 import { logout } from "../features/auth/authSlice";
 import axios from "../api/axios";
 import styles from "./ProfilePage.module.css";
-
+import API_URL from "../api/api";
 const ProfilePage: React.FC = () => {
   const { email, nickname, profileImageUrl, token } = useSelector(
     (state: RootState) => ({
@@ -74,7 +74,6 @@ const ProfilePage: React.FC = () => {
           navigate("/login");
         } else {
           setIsEditing(false);
-          // TODO: Update Redux state with new profile data
         }
       }
     } catch (error) {
@@ -88,10 +87,7 @@ const ProfilePage: React.FC = () => {
       <div className={styles.profileHeader}>
         <div className={styles.profileImageContainer}>
           <img
-            src={
-              previewImage ||
-              `${process.env.REACT_APP_API_URL}/files${profileImageUrl}`
-            }
+            src={previewImage || `${API_URL}/files${profileImageUrl}`}
             alt="Profile"
             className={styles.profileImage}
           />

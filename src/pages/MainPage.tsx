@@ -1,4 +1,10 @@
-import React, { useState, useEffect, createContext, useContext, useCallback } from "react";
+import React, {
+  useState,
+  useEffect,
+  createContext,
+  useContext,
+  useCallback,
+} from "react";
 import { useSelector } from "react-redux";
 import { RootState } from "../store";
 import api from "../api/axios";
@@ -131,7 +137,7 @@ const MainPage: React.FC = () => {
 
   const refreshPosts = useCallback(() => {
     fetchPosts();
-  }, [fetchPosts]);  
+  }, [fetchPosts]);
 
   const renderPosts = () => {
     return posts.map((post) => (

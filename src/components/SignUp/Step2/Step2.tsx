@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import api from "../../../api/axios";
 import styles from "../../../pages/CreateAccountPage.module.css";
 import axios from "axios";
-
+import API_URL from "../../../api/api";
 interface Step2Props {
   setStep: (step: number) => void;
   email: string;
@@ -49,7 +49,18 @@ const Step2: React.FC<Step2Props> = ({ setStep, email, setEmail }) => {
       return;
     }
     try {
-      const response = await api.post("/users/check-email", { email });
+      const response = await axios.post(
+        `${API_URL}/users/check-email`,
+        { email },
+        {
+          headers: {
+            "Content-Type": "application/json",
+            // 필요시 Authorization 헤더 추가
+            // 'Authorization': `Bearer ${yourToken}`,
+          },
+          withCredentials: true, // 쿠키를 포함하는 요청
+        }
+      );
       if (response.data.success) {
         setHelperText("이메일로 인증 코드를 보냈습니다.");
         setIsVerificationCodeSent(true);

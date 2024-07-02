@@ -4,9 +4,8 @@ import styles from "./LoginPage.module.css";
 import { useNavigate } from "react-router-dom";
 import { useDispatch } from "react-redux";
 import { login } from "../features/auth/authSlice";
-
+import API_URL from "../api/api";
 const LoginPage: React.FC = () => {
-  // State declarations
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
   const [emailError, setEmailError] = useState("");
@@ -86,15 +85,12 @@ const LoginPage: React.FC = () => {
     const loginData = { email, password };
 
     try {
-      const response = await fetch(
-        `${process.env.REACT_APP_API_URL}/users/login`,
-        {
-          method: "POST",
-          headers: { "Content-Type": "application/json" },
-          body: JSON.stringify(loginData),
-          mode: "cors",
-        }
-      );
+      const response = await fetch(`${API_URL}/users/login`, {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify(loginData),
+        mode: "cors",
+      });
 
       if (response.ok) {
         const data = await response.json();

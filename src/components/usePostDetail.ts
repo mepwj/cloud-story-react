@@ -4,7 +4,7 @@ import { useSelector } from 'react-redux';
 import { RootState } from '../store';
 import { Post } from '../types';
 
-import { fetchPostDetail } from '../api/api';
+import API_URL from '../api/api';
 
 const usePostDetail = (postId: number) => {
   const [post, setPost] = useState<Post | null>(null);
@@ -15,7 +15,7 @@ const usePostDetail = (postId: number) => {
   useEffect(() => {
     const fetchPostDetail = async () => {
       try {
-        const response = await axios.get(`/api/posts/${postId}`, {
+        const response = await axios.get(`${API_URL}/posts/${postId}`, {
           headers: {
             Authorization: `Bearer ${token}`,
           },
@@ -25,10 +25,10 @@ const usePostDetail = (postId: number) => {
         } else {
           setError('게시글 데이터를 찾을 수 없습니다.');
         }
-        setLoading(false);
       } catch (err) {
         console.error('API error:', err);
         setError('게시글을 불러오는 데 실패했습니다.');
+      } finally {
         setLoading(false);
       }
     };

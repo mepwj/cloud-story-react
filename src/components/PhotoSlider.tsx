@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import ImageModal from "./ImageModal";
 import styles from "./PhotoSlider.module.css";
-
+import API_URL from "../api/api";
 interface Photo {
   id: number;
   url: string;
@@ -45,7 +45,7 @@ const PhotoSlider: React.FC<PhotoSliderProps> = ({ photos }) => {
         {photos.map((photo) => (
           <img
             key={photo.id}
-            src={`3.38.152.113/api/files${photo.url}`}
+            src={`${API_URL}/files${photo.url}`}
             alt={`Post photo ${photo.photoOrder}`}
             className={styles.postPhoto}
             onClick={() => openModal(`/api/files${photo.url}`)}

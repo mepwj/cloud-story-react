@@ -1,6 +1,7 @@
 import axios from 'axios';
 
-const API_URL = "3.38.152.113/api";
+const API_URL =  "http://3.38.152.113/api";
+export default API_URL;
 
 export const fetchComments = async (postId: number, page: number, limit: number, token: string) => {
   const response = await axios.get(`${API_URL}/posts/${postId}/comments?page=${page}&limit=${limit}`, {
