@@ -3,6 +3,10 @@
 - **프로젝트 배포 링크:**
 - AWS 의 EC2 로 배포하였습니다.
 - [[링크]](http://ec2-3-38-152-113.ap-northeast-2.compute.amazonaws.com/)
+- 가입 하기 귀찮다면, 
+   아이디 : test@test.com
+   비밀번호 : asdf1234!
+  로 로그인 하시면 됩니다.
 - 도메인 미정
 
 ## 프로젝트 소개
